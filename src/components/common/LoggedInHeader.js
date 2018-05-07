@@ -9,7 +9,9 @@ const Header = (props) => {
 
     return (
         <View style={viewStyle}>
+            <Text style={{margin: 20}} />
             <Text style={textStyle}>{props.headerText}</Text>
+            <Button title="OK!" style={buttonStyle} onPress={null}/>
         </View>
     );    
 };
@@ -17,7 +19,7 @@ const Header = (props) => {
 const styles = {
     viewStyle: {
         backgroundColor: '#bdc3c7',
-        justifyContent:  'center',
+        justifyContent:  'space-between',
         flexDirection: 'row',
         alignItems: 'center',
         height: 60,
