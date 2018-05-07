@@ -1,25 +1,32 @@
-import React from 'react';
-import { Text, View, Image } from 'react-native';
-import { Card, CardSection } from './common';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import { Card, CardSection, TouchableImage } from './common';
 
-const AlbumDetail = ({ album }) => {
-    const { name, description, thumbnail } = album;
+class AlbumDetail extends Component {
+    renderDetailsView() {
+        this.props.album.name = 'Detta värdet har ändrats';
+    }
 
-    return (
-        <Card>
-            <CardSection>
-                <View style={styles.headerContentStyle}>
-                    <Text style={styles.headerTextStyle}>{name}</Text>
-                    <Text>{description}</Text>
-                </View>
-            </CardSection>
-
-            <CardSection>
-                <Image source={{ uri: thumbnail }} style={styles.imageStyle} />
-            </CardSection>
-        </Card>
-    );
-};
+    render() {
+        return (
+            <Card>
+                <CardSection>
+                    <View style={styles.headerContentStyle}>
+                        <Text style={styles.headerTextStyle}>{this.props.album.name}</Text>
+                        <Text>{this.props.album.description}</Text>
+                    </View>
+                </CardSection>
+    
+                <CardSection>
+                    <TouchableImage 
+                        onPress={this.renderDetailsView()} 
+                        imageDetails={this.props.album}
+                    />
+                </CardSection>
+            </Card>
+        );
+    }
+}
 
 const styles = {
     headerContentStyle: {
@@ -38,11 +45,6 @@ const styles = {
         alignItems: 'center',
         marginLeft: 10,
         marginRight: 10
-    },
-    imageStyle: {
-        height: 300,
-        flex: 1,
-        width: null
     }
 };
 
