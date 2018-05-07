@@ -47,8 +47,8 @@ class App extends Component {
 
     render() {
         return (
-            <View>
-                <Header headerText="Authentication" />
+            <View style={styles.viewStyle}>
+                <Header headerText="Souizt" />
                 {this.renderContent()}
             </View>
         );
@@ -66,6 +66,10 @@ const styles = {
         justifyContent: 'center',
         alignSelf: 'center',
         paddingTop: 300
+    },
+    viewStyle: {
+        flex: 1,
+        backgroundColor: '#27ae60'
     }
 };
 export default App;
