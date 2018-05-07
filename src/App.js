@@ -32,10 +32,10 @@ class App extends Component {
             case true:
             return (
                 <View>
-                    <AlbumList />
                     <CardSection>
                         <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
                     </CardSection>
+                    <AlbumList />
                 </View>
             );
             case false:
