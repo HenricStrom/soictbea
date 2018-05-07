@@ -4,7 +4,6 @@ import { Card, CardSection, TouchableImage } from './common';
 
 class AlbumDetail extends Component {
     renderDetailsView() {
-        this.props.album.name = 'Detta värdet har ändrats';
     }
 
     render() {
