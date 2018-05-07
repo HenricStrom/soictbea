@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import { Text } from 'react-native';
-import { Button, Card, CardSection, Input, Spinner } from './common';
+import { Text, View } from 'react-native';
+import { Button, Card, CardSection, Input, Spinner, Header } from './common';
 
 class LoginForm extends Component {
     state = { email: '', password: '', error: '', loading: false };
@@ -50,6 +50,8 @@ class LoginForm extends Component {
 
     render() {
         return (
+            <View>
+                <Header headerText="Souizt" />
             <Card>
                 <CardSection>
                     <Input
@@ -77,6 +79,7 @@ class LoginForm extends Component {
                     {this.renderButton()}
                 </CardSection>
             </Card>
+            </View>
         );
     }
 }

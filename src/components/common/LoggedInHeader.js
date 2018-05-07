@@ -4,7 +4,7 @@ import { Text, View, Button } from 'react-native';
 
 
 //Make a component
-const Header = (props) => {
+const LoggedInHeader = (props) => {
     const { textStyle, viewStyle, buttonStyle } = styles;
 
     return (
@@ -41,4 +41,4 @@ const styles = {
     }
 };
 
-export { Header };
+export { LoggedInHeader };
