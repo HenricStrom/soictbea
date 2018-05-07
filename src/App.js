@@ -60,9 +60,6 @@ class App extends Component {
 }
 
 const styles = {
-    buttonStyle: {
-
-    },
     spinnerStyle: {
         flex: 1,
         flexDirection: 'row',

@@ -3,7 +3,7 @@ import { Text, View, Image } from 'react-native';
 import { Card, CardSection } from './common';
 
 const AlbumDetail = ({ album }) => {
-    const { name, description, image } = album;
+    const { name, description, thumbnail } = album;
 
     return (
         <Card>
@@ -15,7 +15,7 @@ const AlbumDetail = ({ album }) => {
             </CardSection>
 
             <CardSection>
-                <Image source={{ uri: image }} style={styles.imageStyle} />
+                <Image source={{ uri: thumbnail }} style={styles.imageStyle} />
             </CardSection>
         </Card>
     );
