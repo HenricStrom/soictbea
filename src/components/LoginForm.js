@@ -73,7 +73,7 @@ class LoginForm extends Component {
                     {this.state.error}
                 </Text>
 
-                <CardSection>
+                <CardSection style={styles.buttonStyle}>
                     {this.renderButton()}
                 </CardSection>
             </Card>
@@ -86,6 +86,9 @@ const styles = {
         fontSize: 20,
         alignSelf: 'center',
         color: 'red'
+    },
+    buttonStyle: {
+        backgroundColor: '#27ae60'
     }
 };
 
