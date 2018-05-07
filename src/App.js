@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import firebase from 'firebase';
-import { Header, Button, Spinner, CardSection } from './components/common';
+import { Header, Button, Spinner, CardSection, StatusBar} from './components/common';
 import LoginForm from './components/LoginForm';
 import AlbumList from './components/AlbumList';
 
@@ -52,7 +52,7 @@ class App extends Component {
     render() {
         return (
             <View style={styles.viewStyle}>
-                <Header headerText="Souizt" />
+                <Header headerText="Souizt"/>
                 {this.renderContent()}
             </View>
         );
