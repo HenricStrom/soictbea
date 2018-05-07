@@ -73,7 +73,7 @@ const styles = {
     },
     viewStyle: {
         flex: 1,
-        backgroundColor: '#27ae60'
+        backgroundColor: '#7f8c8d'
     }
 };
 export default App;

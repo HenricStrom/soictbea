@@ -37,7 +37,7 @@ const styles = {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#2ecc71'
+        backgroundColor: '#7f8c8d'
     }
 };
 
