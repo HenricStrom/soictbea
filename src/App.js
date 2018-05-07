@@ -3,9 +3,10 @@ import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button, Spinner, CardSection } from './components/common';
 import LoginForm from './components/LoginForm';
+import AlbumList from './components/AlbumList';
 
 class App extends Component {
-    state = { loggedIn: null,  };
+    state = { loggedIn: null };
 
     componentWillMount() {
         firebase.initializeApp({
@@ -30,9 +31,12 @@ class App extends Component {
         switch (this.state.loggedIn) {
             case true:
             return (
-                <CardSection>
-                    <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
-                </CardSection>
+                <View>
+                    <AlbumList />
+                    <CardSection>
+                        <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
+                    </CardSection>
+                </View>
             );
             case false:
                 return <LoginForm />;
