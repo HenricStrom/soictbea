@@ -1,14 +1,18 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const LoggedInHeader = (props) => {
     const { textStyle, viewStyle, buttonStyle } = styles;
 
     return (
         <View style={viewStyle}>
-            <Text style={{ margin: 20 }} />
+            <Text style={{ margin: 38 }} />
             <Text style={textStyle}>{props.headerText}</Text>
-            <Button title="OK!" style={buttonStyle} onPress={props.onPress} />
+            <TouchableOpacity onPress={props.onPress} style={styles.buttonStyle} >
+        <Text style={styles.textStyle}>
+            Logout
+        </Text>
+        </TouchableOpacity>
         </View>
     );    
 };
@@ -29,6 +33,14 @@ const styles = {
     },
     textStyle: {
         fontSize: 20
+    },
+    buttonStyle: {
+        backgroundColor: '#7f8c8d',
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: '#FFF',
+        margin: 5,
+        padding: 2
     }
 };
 
